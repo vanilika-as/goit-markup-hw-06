@@ -17,11 +17,14 @@
 
 .team-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
 }
 
 .team-card {
-  width: calc((100% - 72px) / 4);
+  width: 264px;
+
   background-color: #ffffff;
   border-radius: 0 0 4px 4px;
 
@@ -29,6 +32,12 @@
     0 2px 1px rgba(46, 47, 66, 0.08),
     0 1px 1px rgba(46, 47, 66, 0.16),
     0 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.team-card img {
+  width: 264px;
+  height: 260px;
+  object-fit: cover;
 }
 
 .team-content {
@@ -93,4 +102,32 @@
 .team-social-icon {
   display: block;
   fill: currentColor;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (min-width: 768px) {
+  .team-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    column-gap: 24px;
+    row-gap: 64px;
+  }
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media screen and (min-width: 1158px) {
+  .team-list {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
 }

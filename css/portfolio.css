@@ -13,14 +13,12 @@
 
 .portfolio-list {
   display: flex;
-  flex-wrap: wrap;
-
-  column-gap: 24px;
-  row-gap: 48px;
+  flex-direction: column;
+  gap: 48px;
 }
 
 .portfolio-card {
-  width: calc((100% - 48px) / 3);
+  width: 100%;
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -35,6 +33,11 @@
 .portfolio-image-wrapper {
   position: relative;
   overflow: hidden;
+}
+
+.portfolio-image-wrapper img {
+  width: 100%;
+  height: auto;
 }
 
 .portfolio-overlay {
@@ -88,4 +91,38 @@
   letter-spacing: 0.02em;
 
   color: #434455;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (min-width: 768px) {
+  .portfolio-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  .portfolio-card {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media screen and (min-width: 1158px) {
+  .portfolio-list {
+    row-gap: 48px;
+  }
+
+  .portfolio-card {
+    width: calc((100% - 48px) / 3);
+  }
 }

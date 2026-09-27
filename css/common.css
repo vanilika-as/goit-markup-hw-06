@@ -28,6 +28,7 @@ a {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 button {
@@ -35,17 +36,19 @@ button {
 }
 
 .container {
-  width: 1158px;
-  padding: 0 15px;
+  width: 100%;
+  max-width: 320px;
   margin: 0 auto;
+  padding: 0 16px;
 }
 
 .section {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .sr-only {
   position: absolute;
+
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -58,4 +61,29 @@ button {
 
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+
+  .section {
+    padding: 120px 0;
+  }
 }
